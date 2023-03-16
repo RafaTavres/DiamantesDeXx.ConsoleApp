@@ -24,7 +24,7 @@ namespace DiamantesDeXx.ConsoleApp
 
                 if (nm1 % 2 == 0)
                 {
-                    Console.WriteLine("Numero deveser ímpar:");
+                    Console.WriteLine("Numero deve ser ímpar:");
                     continue;
                 }
                 else
