@@ -6,31 +6,31 @@ namespace DiamantesDeXx.ConsoleApp
     {
         static int resultado = 1;
         static int numeroDigitado;
-        static int espacos = (numeroDigitado - 1) / 2;
+        static int espacos;
         static void Main(string[] args)
         {
             const string SAIR = "S";
             string resposta = "";
 
-             while (resposta.ToUpper() != SAIR)
+            while (resposta.ToUpper() != SAIR)
             {
                 PegaOsNumeroDigitado();
+
                 if (numeroDigitado % 2 == 0)
                 {
                     MensagemDeErro("Numero deve ser ímpar:");
                     continue;
                 }
                 else
-                EscreveParteDeCimaDoDIamante();
+                    EscreveParteDeCimaDoDIamante();
                 EscreveParteDebaixoDoDIamante();
                 Console.WriteLine("Sair S/N");
                 resposta = Console.ReadLine();
 
             }
-            Console.ReadLine();
-        }
 
-        private static void EscreveParteDebaixoDoDIamante()
+        }
+        static void EscreveParteDebaixoDoDIamante()
         {
             for (int i = 1; resultado > 0; i++)
             {
@@ -50,7 +50,7 @@ namespace DiamantesDeXx.ConsoleApp
                 Console.WriteLine("");
             }
         }
-        private static void EscreveParteDeCimaDoDIamante()
+        static void EscreveParteDeCimaDoDIamante()
         {
             for (int i = 1; espacos > 0; i++)
             {
@@ -71,13 +71,14 @@ namespace DiamantesDeXx.ConsoleApp
 
             }
         }
-        private static void PegaOsNumeroDigitado()
+        static void PegaOsNumeroDigitado()
         {
             Console.WriteLine("\n------------------");
             Console.WriteLine("Numero Ímpar: ");
-            numeroDigitado = Convert.ToInt32(Console.ReadLine()); Convert.ToInt32(Console.ReadLine());
+            numeroDigitado = Convert.ToInt32(Console.ReadLine());
+            espacos = (numeroDigitado - 1) / 2;
         }
-        private static void MensagemDeErro(string mensagem)
+        static void MensagemDeErro(string mensagem)
         {
             Console.WriteLine(mensagem);
         }
