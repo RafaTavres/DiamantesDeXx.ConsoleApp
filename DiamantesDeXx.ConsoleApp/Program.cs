@@ -22,7 +22,7 @@ namespace DiamantesDeXx.ConsoleApp
                     continue;
                 }
                 else
-                    EscreveParteDeCimaDoDIamante();
+                EscreveParteDeCimaDoDIamante();
                 EscreveParteDebaixoDoDIamante();
                 Console.WriteLine("Sair S/N");
                 resposta = Console.ReadLine();
