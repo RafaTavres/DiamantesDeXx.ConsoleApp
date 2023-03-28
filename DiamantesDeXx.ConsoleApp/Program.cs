@@ -4,10 +4,6 @@ namespace DiamantesDeXx.ConsoleApp
 {
     internal class Program
     {
-        /*
-         Dado um número ímpar, exiba um diamante desenhado com a letra ‘x’.
-         No diamante acima, o número é 21, pois há 21 colunas e 21 ‘x’ na linha central.
-         */
         static int resultado = 1;
         static int numeroDigitado;
         static int espacos = (numeroDigitado - 1) / 2;
@@ -19,18 +15,14 @@ namespace DiamantesDeXx.ConsoleApp
              while (resposta.ToUpper() != SAIR)
             {
                 PegaOsNumeroDigitado();
-
                 if (numeroDigitado % 2 == 0)
                 {
                     MensagemDeErro("Numero deve ser ímpar:");
                     continue;
                 }
                 else
-
-                    EscreveParteDeCimaDoDIamante();
-
+                EscreveParteDeCimaDoDIamante();
                 EscreveParteDebaixoDoDIamante();
-
                 Console.WriteLine("Sair S/N");
                 resposta = Console.ReadLine();
 
@@ -58,7 +50,6 @@ namespace DiamantesDeXx.ConsoleApp
                 Console.WriteLine("");
             }
         }
-
         private static void EscreveParteDeCimaDoDIamante()
         {
             for (int i = 1; espacos > 0; i++)
@@ -80,7 +71,6 @@ namespace DiamantesDeXx.ConsoleApp
 
             }
         }
-
         private static void PegaOsNumeroDigitado()
         {
             Console.WriteLine("\n------------------");
